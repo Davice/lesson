@@ -1,0 +1,17 @@
+1.JS和CSS的引入/写入位置应该放在哪里？	
+https://blog.csdn.net/fragrant_no1/article/details/78222915
+
+2.选择器
+Class
+id
+
+3.for - 多次遍历代码块
+for/in - 遍历对象属性
+while - 当指定条件为 true 时循环一段代码块
+do/while - 当指定条件为 true 时循环一段代码块
+
+4.盒子模型
+margin 
+border
+padding
+content

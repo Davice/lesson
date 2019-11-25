@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML/CSS/Javascript</title>
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+</head>
+<body>
+    <div id="div_login">
+        <div id="div_title"><h1>用户登陆</h1></div>
+        <div id="midden">
+            <p><input id="username" class="inputinfo" type="text" name="username" placeholder="请输入用户名"></p>
+            <p><input id="password" class="inputinfo" type="password" name="password" placeholder="请输入密码"></p>
+            <input type="submit" id="submitbutton" class="submitbutton" value="登陆">
+ 
+            <div id="info">
+                    <p id="time" onmousemove="showTime(this.id)" onmouseout="this.innerHTML='显示时间'">显示时间</p>
+            </div>
+        </div>       
+    </div>
+    <script type="text/javascript">
+        let btn= document.getElementById("submitbutton");
+        btn.addEventListener('click', showMsg, false);
+    
+        function showMsg(){
+            let username_text= document.getElementById("username").value;
+            let password_text=document.getElementById("password").value;
+            if(username_text == "" && password_text == ""){
+                alert("login failed");
+            }else{
+	            alert("login successfully");
+            }
+	    };
+    
+        function showTime(id){
+            let time=getTime();
+            let time_lbl=document.getElementById(id);
+            time_lbl.innerHTML=time;
+        }
+
+        function getTime(){
+            let myDate = new Date();
+            let hour=myDate.getHours();      //获取当前小时数(0-23)
+            let minute=myDate.getMinutes();    //获取当前分钟数(0-59)
+            let second=myDate.getSeconds();    //获取当前秒数(0-59)       
+            let list=new Array(hour,minute,second);    
+            return join(list,":");// list.join(":"); 
+        }
+
+        function join(array,str){
+            let result="";
+           // for(let a in array){
+            for(let a of array){
+                if(result==""){
+                    result+=a;
+                }else{
+                    result+=str+a;
+                }
+            }
+           
+            return result;
+        }
+		
+		window.onload=function(){ 
+    alert("页面加载完成！"); 
+	var div = document.createElement("div"); 
+	let count=0;
+	while(count!=10){
+		console.log(count);
+		count++;
+		div.innerHTML = '当前登录人数：'+count;
+	}
+		
+	document.getElementById("info").appendChild(div);
+} 
+    </script>
+</body>
+</html>

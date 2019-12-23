@@ -3,3 +3,7 @@
 ################################################################################
 
 /lesson2/lesson2/.vs/lesson2
+/lesson2/lesson2/lesson2/bin
+/lesson2/lesson2/lesson2/obj/Debug
+/lesson2/lesson2/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0
+/.vs

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Content/Script/jquery-1.10.2.min.js"></script>
+    <script src="Content/Script/demo.js"></script>
+    <link href="Content/Style/demo.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="contentHead">
+        <div id="logo">
+        </div>
+        <div id="toolMenu">
+            <a href="http://www.baidu.com"><img id="userImg" src="/Content/Image/userImg.png" /></a>
+            <a href="http://www.baidu.com"><div id="userInfo">user name</div></a>
+        </div>
+    </div>
+    <div id="contentBody">
+        <div id="leftSideBar">
+            <div id="leftSideMenu">
+                <ul>
+                    <li><a onclick="clickMyTask()" href="../Task/MyTask">我的任务</a></li>
+                </ul>
+                <ul>
+                    <li><a onclick="clickTaskHistory()" href="../Task/TaskHistory">历史任务</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="rightSideBar">
+            <span id="contentTitle">我的任务</span>
+            <div id="contentTop">
+                <div id="searchArea">
+                    <div>
+                        <span>任务名称：</span><input type="text" placeholder="请输入" />
+                    </div>
+                    <div>
+                        <span>任务类型：</span><select><option>请选择</option></select>
+                    </div>
+                    <div>
+                        <span>审批人：</span><select><option>请选择</option></select>
+                    </div>
+                    <input type="button" value="查询" />
+                </div>
+            </div>
+
+            <div id="contentBottom">
+                <table id="resultTable">
+                    <thead>
+                        <tr>
+                            <th>任务序号</th>
+                            <th>项目名称</th>
+                            <th>任务名称</th>
+                            <th>截止时间</th>
+                            <th>审核人</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Microsoft</td>
+                            <td>小冰标注</td>
+                            <td>2019/12/13</td>
+                            <td>QA</td>
+                            <td><a href="">开始任务</a> <a href="">查看详情</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

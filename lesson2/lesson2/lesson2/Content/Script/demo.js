@@ -6,7 +6,7 @@
         data: {},
         success: function (result) {
             //var json = JSON.parse(data);
-            alert(result);
+            //alert(result);
         }
     });
 });
